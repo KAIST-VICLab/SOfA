@@ -22,7 +22,9 @@
         <a href="https://kaist-viclab.github.io/SOfA_site/" target='_blank'>
         <img src="https://img.shields.io/badge/🏠-Project%20Page-blue">
         </a>
-        <img src="https://img.shields.io/badge/arXiv-Coming%20Soon-lightgrey.svg">
+        <a href="https://arxiv.org/abs/2609.07078" target='_blank'>
+        <img src="https://img.shields.io/badge/arXiv-2609.07078-b31b1b.svg">
+        </a>
         <img src="https://img.shields.io/badge/🤗-Models%20Coming%20Soon-lightgrey">
         <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/KAIST-VICLab/SOfA">
     </h4>
@@ -319,11 +321,10 @@ Code and pre-trained weights are **not yet public**. This repository will be pop
 @article{do2026sofa,
   title={One for All: Generalist Foundation Model for Cross-Sensor Skeleton Representation Learning},
   author={Do, Jeonghyeok and Chen, Yun and Kim, Munchurl},
+  journal={arXiv preprint arXiv:2609.07078},
   year={2026}
 }
 ```
-
-*Placeholder — to be updated with the arXiv identifier and venue once the paper is public.*
 
 ## Acknowledgements
 
