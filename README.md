@@ -48,7 +48,7 @@ indexing protocol, or topology — and emits one standardized representation.
 * 🔤 **Semantic Joint Embedding (SJE).** Rigid absolute positional embeddings are replaced by text-encoder
   features built from joint *names*, so anatomically identical joints share a latent identity across sensors.
 * ⚡ **6.59× cheaper inference.** 4.30 GFLOPs vs. 28.32 for MAE-based SSL baselines, while *improving* accuracy.
-* 🌍 **Ten datasets, one corpus.** Standardized into a shared hip-centered metric coordinate frame.
+* 🌍 **Ten datasets, one coordinate frame.** Standardized into a shared hip-centered metric frame; eight are used for pre-training and the two 15-joint sets are held out as unseen.
 
 ---
 
@@ -184,7 +184,7 @@ closes the gap by transferring skeletal priors learned across the whole corpus.
 | MANs | 82.4 | | GL-Transformer | 90.4 |
 | HCN | 88.0 | | Masked-Color | 92.0 |
 | FSA-CNN | 90.6 | | | |
-| **SOfA (un-supervised)** | **87.9** | | **SOfA (sensor-unified)** | **92.9** |
+| **SOfA (un-supervised)** | 87.9 | | **SOfA (sensor-unified)** | **92.9** |
 
 NW-UCLA is reached with **the exact same weights** as the 25-joint results above.
 
@@ -206,7 +206,7 @@ Both datasets are **completely excluded from pre-training**. Frozen encoder, no 
 | SkeletonMAE | 66.8 | | SkeletonMAE | 73.1 |
 | MAMP | 73.7 | | MAMP | 80.2 |
 | *Unseen + Sensor-Unified* | | | *Unseen + Sensor-Unified* | |
-| **SOfA (Ours)** | **91.7** | | **SOfA (Ours)** | **97.0** |
+| **SOfA (Ours)** | 91.7 | | **SOfA (Ours)** | 97.0 |
 
 Sensor-specific SSL methods collapse on out-of-distribution topologies (66.8% / 73.1%); SOfA lands in the range
 of fully-supervised models trained end-to-end on these datasets with full label access.
@@ -260,7 +260,7 @@ data, so without a semantic anchor the network biases toward that indexing.
 | 10 | 85.5 | 79.0 | 64.5 | 92.7 | **98.0** | 5.41 |
 | 15 | 85.3 | 78.9 | 63.5 | 91.8 | 97.0 | 6.55 |
 
-![cjs](assets/cjs_tsne.png)
+![cjs](assets/cjs_tsne.jpg)
 
 The five slots autonomously converge toward the semantic centers of distinct anatomical clusters — the torso and
 the four limbs. If CJS were a generic compression bottleneck its optimal size would be arbitrary; instead
@@ -322,6 +322,17 @@ Code and pre-trained weights are **not yet public**. This repository will be pop
   title={One for All: Generalist Foundation Model for Cross-Sensor Skeleton Representation Learning},
   author={Do, Jeonghyeok and Chen, Yun and Kim, Munchurl},
   journal={arXiv preprint arXiv:2609.07078},
+  year={2026}
+}
+```
+
+Our prior work on skeleton representation learning, [SLiM](https://github.com/KAIST-VICLab/SLiM) ([project page](https://kaist-viclab.github.io/SLiM_site/)):
+
+```BibTeX
+@inproceedings{do2026less,
+  title={Less is More: Compact-Token Masked Feature Prediction for Skeleton Representation Learning},
+  author={Do, Jeonghyeok and Chen, Yun and Youk, Geunhyuk and Kim, Munchurl},
+  booktitle={Advances in Neural Information Processing Systems (NeurIPS)},
   year={2026}
 }
 ```
